@@ -1,0 +1,8 @@
+sudo docker stop ai_answer
+
+sudo docker rm ai_answer
+
+sudo docker build -t answer_service .
+
+sudo docker run -d --network=hbt-network --name ai_answer --restart always -p 8787:8787 answer_service
+
